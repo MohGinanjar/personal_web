@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:personal_web/app/modules/home/views/widget/home.dart';
+import 'package:personal_web/app/modules/home/views/widget/tentang.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -38,10 +39,12 @@ class HomeView extends GetView<HomeController> {
       body: PageView(
       controller: controller.page,
       scrollDirection: Axis.vertical,
+      allowImplicitScrolling: true,
       children: [
         Container(
-          child: Center(child: Home()),),
-        Container(child: Center(child: Text("2")),),
+          child: Home(),),
+        Container(
+          child: Tentang(),),
         Container(child: Center(child: Text("3")),),
         Container(child: Center(child: Text("4")),),
         Container(child: Center(child: Text("5")),),
