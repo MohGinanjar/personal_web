@@ -56,6 +56,18 @@ class Tentang extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.blue)
                   ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left:20.0, top: 15.0,),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.stay_current_portrait, color: Colors.amberAccent,),
+                        Text("Mobile Applications",style: Theme.of(context).textTheme.headline5!
+                                .copyWith(color: Colors.black54) ),
+                        Text("Membuat aplikasi berbasis mobile untuk cross platform Android dan iOS menggunakan bahasa pemrograman Dart dan framework Flutter.")
+                      ],
+                    ),
+                  ),
                 ),
               ),
               Card(
@@ -64,6 +76,18 @@ class Tentang extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.8,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.blue)
+                  ),
+                  child: Padding(
+                   padding: const EdgeInsets.only(left:20.0, top: 15.0,),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(MdiIcons.powershell, color: Colors.orange,),
+                        Text("Backend Development",style: Theme.of(context).textTheme.headline5!
+                                .copyWith(color: Colors.black54) ),
+                        Text("Membuat RestfullAPI menggunakan framework Django untuk keperluan data handling dari sisi Mobile Applications.")
+                      ],
+                    ),
                   ),
                 ),
               )
