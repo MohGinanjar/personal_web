@@ -1,10 +1,22 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   PageController page = PageController();
-
+  var activeIndex = 0.obs;
+  final controllerSlider = CarouselController();
   final count = 0.obs;
+
+  late ScrollController scrollController;
+  double scrollPosition = 0;
+  double opacity = 0;
+
+  List isHovering = [false, false, false, false, false, false].obs;
+
+  _scrollListener() {
+    scrollPosition = scrollController.position.pixels;
+  }
   @override
   void onInit() {
     super.onInit();
@@ -17,15 +29,14 @@ class HomeController extends GetxController {
 
   List<Map> dataproject = [
     {
-      'title':"PT. Hino Motors Sales Indonesia",
-      'cover':"assets/1.png",
-      'description':""
+      'title': "PT. Hino Motors Sales Indonesia",
+      'cover': "assets/1.png",
+      'description': ""
     },
     {
-      'title':"PT. Surveyor Indonesia",
-      'cover':"assets/2.png",
-      'description':""
-
+      'title': "PT. Surveyor Indonesia",
+      'cover': "assets/2.png",
+      'description': ""
 
 //Solusi dan Informasi Human Capital kini hadir dalam genggaman Anda! Monitor dan Kelola daftar hadir Anda dengan mudah dimanapun Anda berada, akses informasi terbaru terkait kepegawaian dan kembangkan diri Anda dengan mengikuti berbagai pelatihan digital tentang produk jasa PT Surveyor Indonesia atau materi self-development yang menarik untuk diikuti.
 
@@ -39,15 +50,11 @@ class HomeController extends GetxController {
 // 5. SI Topik : Akses Video yang menarik bagi pengembangan diri Anda dan ketahui berbagai informasi yang perlu Anda ketahui seputar Surveyor Indonesia
     },
     {
-      'title':"KSPPS Bina Auliadi Mandiri",
-      'cover':"assets/3.png",
-      'description':""
+      'title': "KSPPS Bina Auliadi Mandiri",
+      'cover': "assets/3.png",
+      'description': ""
     },
-    {
-      'title':"PT. Sigap",
-      'cover':"assets/4.png",
-      'description':""
-    },
+    {'title': "PT. Sigap", 'cover': "assets/4.png", 'description': ""},
   ];
 
   @override

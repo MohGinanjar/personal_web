@@ -8,7 +8,7 @@ import 'app/routes/app_pages.dart';
 void main() {
   runApp(
     GetMaterialApp(
-      title: "Personal Webiste Mohamad Ginanjar",
+      title: "Personal Website Mohamad Ginanjar",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       scrollBehavior: AppScrollBehavior(),
